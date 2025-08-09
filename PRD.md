@@ -37,7 +37,7 @@ A modern, multi-tenant e-commerce platform tailored for Bangladesh’s small-to-
 * Filters: Price, Brand, Rating, Discount, Availability.
 * Sort options: Low-to-high price, popularity, newest.
 * Variant selection: Size, Color, Weight, Volume.
-* Stock status: In Stock / Out of Stock / Pre-order.
+* Stock status: In Stock / Out of Stock.
 
 ### 3.3 Product Detail Page
 
@@ -53,7 +53,6 @@ A modern, multi-tenant e-commerce platform tailored for Bangladesh’s small-to-
 * Persistent cart synced across devices.
 * Guest checkout without registration.
 * Payment methods:
-
   * bKash, Nagad, Rocket, Upay
   * Debit/Credit Cards
   * COD
@@ -155,7 +154,7 @@ A modern, multi-tenant e-commerce platform tailored for Bangladesh’s small-to-
 * Store-specific branding, themes, colors, and domains.
 * Per-tenant VAT/tax rules, payment methods, and delivery settings.
 
-### 3.18 Business-Specific Settings
+### 3.18 Tenant-Specific Settings
 
 * Custom themes, banners, and logos per tenant.
 * Configurable delivery rules:
@@ -163,6 +162,64 @@ A modern, multi-tenant e-commerce platform tailored for Bangladesh’s small-to-
   * Groceries → Same-day delivery slots
   * Electronics → Scheduled delivery with installation
 * Payment method enable/disable per tenant.
+
+### 3.19 Content Management
+
+* CMS for Static Pages (About Us, Terms, Privacy Policy).
+* Blog/News Section (content marketing).
+* Banner Management (promotional banners).
+* Landing Page Builder (campaign pages).
+
+### 3.20 Customer Support & Communication
+
+* Live Chat System (real-time customer support).
+* Help Desk/Ticketing System (customer issue tracking).
+* FAQ Management (self-service support).
+* Customer Feedback/Review System (product reviews, ratings).
+
+### 3.21 Advanced E-commerce Features
+
+* Recently Viewed Products (browsing history).
+* Cross-sell/Up-sell Recommendations (AI-powered product suggestions).
+* Gift Cards/Vouchers (digital gift certificates).
+* Guest User Shopping (without full registration).
+
+### 3.22 Image Management & Optimization
+
+* Automatic image compression and optimization during upload.
+* Multiple format support (JPEG, PNG, WebP, AVIF).
+* Automatic resizing for different display contexts (thumbnail, medium, large).
+* CDN integration for fast image delivery.
+* Bulk image upload and processing.
+* Image quality settings per use case (product images, banners, user avatars).
+* AI-powered background removal for product images.
+* AI image retouching and enhancement features.
+
+### 3.23 Feature Management & Configuration
+
+* **Feature Toggle System**: Enable/disable features per tenant via admin dashboard.
+* **Dynamic UI Rendering**: Show/hide UI components based on activated features.
+* **Per-tenant Feature Configuration**: Customize feature availability per client.
+
+### 3.24 Advanced Marketing & Automation
+
+* Cart Abandonment Recovery (email/SMS campaigns for abandoned carts).
+* Email Marketing Automation (drip campaigns, triggered emails).
+* Personalization Engine (personalized homepage, product recommendations).
+
+### 3.25 Advanced Inventory & Supply Chain
+
+* Stock Reservation System (temporary stock holds during checkout).
+* Supplier Management (purchase orders, supplier ratings).
+* Low Stock Alerts (automated reorder suggestions).
+
+### 3.26 Coupon, Voucher & Discount Management
+
+* Coupon creation and management (percentage, fixed amount, BOGO).
+* Voucher system (gift vouchers, promotional vouchers).
+* Discount rules engine (bulk discounts, category discounts).
+* Promo code generation and tracking.
+* Usage limits and expiration management.
 
 ---
 
@@ -196,7 +253,85 @@ A modern, multi-tenant e-commerce platform tailored for Bangladesh’s small-to-
 
 ---
 
-## 6. MVP Scope
+## 6. Technical Architecture
+
+### 6.1 Technology Stack
+
+* **Frontend**: Next.js (React-based framework)
+* **Backend**: .NET 9 with Onion Architecture
+* **Database**: PostgreSQL
+* **Integration Layer**: Dedicated third-party integration layer for logistics, payments, and social media APIs
+
+### 6.2 Architecture Overview
+
+* **Onion Architecture**: Clean separation of concerns with Domain, Application, Infrastructure, and Presentation layers
+* **Database Architecture**: PostgreSQL for scalable relational data management
+* **Third-party Integration Architecture**: Isolated integration layer to handle external services:
+  * Payment gateways (bKash, Nagad, SSLCOMMERZ)
+  * Courier services (Pathao, RedX, Steadfast, eCourier, Paperfly)
+  * Social media APIs (Facebook, Instagram)
+  * SMS gateways (GP, Robi, Banglalink)
+
+### 6.3 API Architecture Requirements
+
+**API Design**:
+* RESTful API design with proper HTTP verbs (GET, POST, PUT, DELETE)
+* GraphQL for complex data fetching
+* API versioning strategy (v1, v2, etc.)
+
+**Authentication & Authorization**:
+* JWT token-based authentication
+* Role-based access control (RBAC) for different user types with customized permission assignment
+* API key management for third-party integrations
+
+**Data Format & Standards**:
+* JSON request/response format
+* Consistent error response structure
+* Pagination standards for list endpoints
+
+**Performance Requirements**:
+* Response time SLAs (e.g., <200ms for critical endpoints)
+* Caching strategy (Redis/in-memory)
+* Database query optimization
+
+### 6.4 Microservices Architecture
+
+**Hybrid Architecture Overview**:
+* **Core E-commerce Platform**: .NET 9 with Onion Architecture (product catalog, user management, orders, multi-tenant management)
+* **High-TPS Microservices**: NestJS for external integrations and high-volume operations
+
+**NestJS Microservices**:
+
+1. **Payment Gateway Service (NestJS)**
+   * Handle bKash, Nagad, SSLCOMMERZ integrations
+   * PCI compliance isolation
+   * High transaction volume handling
+
+2. **Logistics/Courier Service (NestJS)**
+   * Pathao, RedX, Steadfast APIs
+   * Real-time tracking updates
+   * Rate calculation engine
+
+3. **Social Media Integration Service (NestJS)**
+   * Facebook/Instagram API handling
+   * AI auto-reply processing
+   * Message queue management
+
+4. **Notification Service (NestJS)**
+   * SMS gateway handling (GP, Robi, Banglalink)
+   * Email campaigns
+   * Push notifications
+   * Rate limiting per provider
+
+**Service Communication**:
+* API Gateway for request routing
+* Event Bus (Redis/RabbitMQ) for async communication
+* Circuit breakers for fault isolation
+* Independent scaling based on service load
+
+---
+
+## 7. MVP Scope
 
 **Included in MVP**:
 
