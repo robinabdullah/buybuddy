@@ -2,12 +2,12 @@
 ## E-Commerce Platform Development
 
 ### Table of Contents
-- [1. Documentation Architecture](#1-documentation-architecture) (Line 8)
-- [2. Phase-Specific Extraction Approach](#2-phase-specific-extraction-approach) (Line 25)
-- [3. Documentation Workflow](#3-documentation-workflow) (Line 85)
-- [4. Task Breakdown Methodology](#4-task-breakdown-methodology) (Line 125)
-- [5. Document Templates](#5-document-templates) (Line 175)
-- [6. Maintenance Guidelines](#6-maintenance-guidelines) (Line 250)
+- [1. Documentation Architecture](#1-documentation-architecture) (Line 14)
+- [2. Phase-Specific Extraction Approach](#2-phase-specific-extraction-approach) (Line 31)
+- [3. Documentation Workflow](#3-documentation-workflow) (Line 118)
+- [4. Task Breakdown Methodology](#4-task-breakdown-methodology) (Line 166)
+- [5. Document Templates](#5-document-templates) (Line 219)
+- [6. Maintenance Guidelines](#6-maintenance-guidelines) (Line 374)
 
 ---
 
@@ -34,17 +34,41 @@ documentation/
 ```
 documentation/
 ├── master/ (Complete specifications)
+│   ├── PRD.md                   # Complete Product Requirements
+│   ├── Technical-Architecture.md # Complete System Design
+│   ├── Data-Model.md            # Complete Database Design
+│   ├── API-Specification.md     # Complete API Documentation
+│   └── Security-Requirements.md # Complete Security Specs
 ├── mvp/
 │   ├── MVP-PRD.md               # Extracted MVP features only
 │   ├── MVP-SRS.md               # Technical specs for MVP
 │   ├── MVP-UIDD.md              # UI designs for MVP features
+│   ├── wireframes/
+│   │   ├── 01-customer-registration.fig      # Customer signup flow
+│   │   ├── 02-product-catalog.fig            # Product browsing
+│   │   ├── 03-product-details.fig            # Product detail page
+│   │   ├── 04-cart-checkout.fig              # Shopping cart & checkout
+│   │   ├── 05-order-tracking.fig             # Order status tracking
+│   │   ├── 06-seller-dashboard.fig           # Seller main dashboard
+│   │   ├── 07-seller-products.fig            # Product management
+│   │   ├── 08-seller-orders.fig              # Order management
+│   │   ├── 09-admin-dashboard.fig            # Platform admin interface
+│   │   ├── 10-admin-tenants.fig              # Tenant management
+│   │   └── user-flow-diagrams.fig            # Complete user journeys
 │   ├── MVP-Tasks.md             # Comprehensive task breakdown
-│   ├── MVP-API-Docs.md          # API documentation for MVP
+│   ├── MVP-API-Docs.md          # API documentation for MVP endpoints
 │   └── MVP-Testing-Plan.md      # Testing strategy for MVP
 ├── phase2/
 │   ├── Phase2-PRD.md            # Phase 2 specific features
 │   ├── Phase2-SRS.md            # Technical specs for Phase 2
 │   ├── Phase2-UIDD.md           # UI designs for Phase 2
+│   ├── wireframes/
+│   │   ├── 11-social-media-hub.fig           # Social commerce interface
+│   │   ├── 12-notification-center.fig        # SMS/Email campaigns
+│   │   ├── 13-analytics-dashboard.fig        # Advanced analytics
+│   │   ├── 14-marketing-automation.fig       # Marketing campaigns
+│   │   ├── 15-vendor-management.fig          # Vendor portal
+│   │   └── phase2-user-flows.fig             # Phase 2 user journeys
 │   ├── Phase2-Tasks.md          # Task breakdown for Phase 2
 │   ├── Phase2-API-Docs.md       # New APIs for Phase 2
 │   ├── Phase2-Migration.md      # Database migrations needed
@@ -53,6 +77,12 @@ documentation/
 │   ├── Phase3-PRD.md
 │   ├── Phase3-SRS.md
 │   ├── Phase3-UIDD.md
+│   ├── wireframes/
+│   │   ├── 16-ai-recommendations.fig          # AI product recommendations
+│   │   ├── 17-visual-search.fig               # Visual/Voice search interface
+│   │   ├── 18-subscription-management.fig     # Subscription services
+│   │   ├── 19-business-intelligence.fig       # BI dashboard
+│   │   └── phase3-user-flows.fig              # Phase 3 user journeys
 │   ├── Phase3-Tasks.md
 │   ├── Phase3-API-Docs.md
 │   ├── Phase3-Migration.md
@@ -60,6 +90,7 @@ documentation/
 └── shared/
     ├── Feature-Traceability.md  # Feature to phase mapping
     ├── Dependency-Matrix.md     # Cross-module dependencies
+    ├── API-Standards.md         # Common API standards across phases
     └── Release-Notes/           # Version-specific release notes
 ```
 
@@ -72,8 +103,8 @@ documentation/
 6. **AI-Assisted Development**: AI can focus on specific phase requirements
 7. **Large File Management**: Table of contents with line numbers for navigation
 
-### Table of Contents Management
-For larger documents, maintain TOC with line number references:
+### API Documentation Module TOC
+For API documents, maintain module-wise table of contents with line number range references:
 
 ```markdown
 ### Table of Contents
@@ -106,13 +137,27 @@ For larger documents, maintain TOC with line number references:
 3. Define API contracts for current phase features
 4. Specify integration points for future phases
 
-#### Step 4: Task Breakdown Creation
+#### Step 4: Mobile-First UI/UX Design & Wireframing
+1. Create mobile-first wireframes for all phase features
+2. Design responsive layouts with breakpoint specifications
+3. Apply Bangladesh-specific UX considerations and cultural context
+4. Create user journey flow diagrams and interaction patterns
+5. Ensure touch-friendly interface design for mobile devices
+6. Document accessibility requirements and offline-first capabilities
+
+#### Step 5: API Documentation
+1. Create phase-specific API docs with module-wise organization
+2. Include line-numbered table of contents for AI navigation
+3. Document all endpoints for current phase features
+4. Specify request/response formats and authentication
+
+#### Step 6: Task Breakdown Creation
 1. Break down each feature into development tasks
 2. Estimate effort for each task
 3. Identify dependencies between tasks
 4. Create sprint-ready backlog
 
-#### Step 5: Review and Validation
+#### Step 7: Review and Validation
 1. Validate against master documentation
 2. Ensure phase objectives are met
 3. Review dependencies with other phases
@@ -120,26 +165,19 @@ For larger documents, maintain TOC with line number references:
 
 ## 4. Task Breakdown Methodology
 
-### Task Categories
-- **Epic**: Large feature (e.g., User Management System)
-- **Story**: User-facing functionality (e.g., User Registration)
-- **Task**: Technical implementation work (e.g., Create User API)
-- **Sub-task**: Specific development activity (e.g., Write unit tests)
+### Task Structure (Module → Task → Sub-task)
+- **Module**: Functional area (e.g., User Management, Product Catalog)
+- **Task**: Implementation work (e.g., Create User Registration API)
+- **Sub-task**: Specific development activity (e.g., Write unit tests, Create validation)
 
 ### Task Template
 ```markdown
-## Epic: [Epic Name]
-**Description**: Brief epic overview
-**Business Value**: Why this epic is important
+## Module: [Module Name]
+**Description**: Module overview
+**Business Value**: Why this module is important
 **Acceptance Criteria**: High-level success criteria
 
-### Story: [Story Name]
-**Description**: User story description
-**Acceptance Criteria**: Specific requirements
-**Dependencies**: Other stories/tasks this depends on
-**Effort Estimate**: Story points or hours
-
-#### Task: [Task Name]
+### Task: [Task Name]
 **Description**: Technical work to be done
 **Implementation Details**: Technical approach
 **Definition of Done**: Completion criteria
@@ -147,7 +185,7 @@ For larger documents, maintain TOC with line number references:
 **Assigned To**: Developer name
 **Dependencies**: Technical dependencies
 
-##### Sub-task: [Sub-task Name]
+#### Sub-task: [Sub-task Name]
 **Description**: Specific work item
 **Effort Estimate**: Hours
 **Status**: Not Started/In Progress/Done
@@ -159,21 +197,22 @@ For larger documents, maintain TOC with line number references:
 ```markdown
 # MVP Task Breakdown
 
-## Epic 1: User Management System [40 Story Points]
+## Module 1: User Management System [40 Hours]
 
-### Story 1.1: User Registration [8 SP]
-- Task 1.1.1: Design user registration API [4h]
-  - Sub-task: Create user model [2h]
-  - Sub-task: Implement validation [2h]
-- Task 1.1.2: Build registration UI [6h]
-- Task 1.1.3: Integration testing [3h]
+### Task 1.1: User Registration API [12h]
+- Sub-task: Create user model [2h]
+- Sub-task: Implement validation [2h]
+- Sub-task: Create registration endpoint [3h]
+- Sub-task: Write unit tests [3h]
+- Sub-task: Integration testing [2h]
 
-### Story 1.2: User Authentication [8 SP]
-- Task 1.2.1: Implement JWT authentication [5h]
-- Task 1.2.2: Create login API [3h]
-- Task 1.2.3: Build login UI [4h]
+### Task 1.2: User Authentication System [15h]
+- Sub-task: Implement JWT authentication [5h]
+- Sub-task: Create login API [3h]
+- Sub-task: Password reset functionality [4h]
+- Sub-task: Write tests [3h]
 
-## Epic 2: Product Catalog System [60 Story Points]
+## Module 2: Product Catalog System [60 Hours]
 [Detailed breakdown continues...]
 ```
 
@@ -248,11 +287,11 @@ For larger documents, maintain TOC with line number references:
 [Generated with line numbers]
 
 ### Sprint Planning Overview
-**Total Story Points**: XX
+**Total Hours**: XX
 **Estimated Timeline**: X weeks
-**Team Capacity**: X story points per sprint
+**Team Capacity**: X hours per sprint
 
-### Epic Breakdown
+### Module Breakdown
 [Follow task structure defined above]
 
 ### Dependencies Matrix
@@ -265,6 +304,71 @@ For larger documents, maintain TOC with line number references:
 - Technical risks and mitigation
 - Resource risks and mitigation
 - Timeline risks and mitigation
+```
+
+### Wireframe Documentation Template
+```markdown
+# [Phase] UI/UX Wireframe Documentation
+## E-Commerce Platform Development
+
+### Table of Contents
+[Generated with line numbers]
+
+### Mobile-First Design Principles
+**Target Devices**: Mobile (320px+), Tablet (768px+), Desktop (1024px+)
+**Primary Focus**: Mobile experience with responsive enhancement
+**Network Optimization**: 2G/3G network compatibility for Bangladesh market
+
+### Wireframe File Standards
+**Naming Convention**: Sequential numbering (01-, 02-, etc.)
+**File Format**: .fig (Figma), .sketch (Sketch), .xd (Adobe XD)
+**Responsive Breakpoints**: 
+- Mobile: 320px - 767px
+- Tablet: 768px - 1023px  
+- Desktop: 1024px+
+
+### Bangladesh-Specific UX Requirements
+**Language Support**: Bangla/English toggle capability
+**Payment Methods**: bKash, Nagad, COD interface design
+**Cultural Context**: Religious festivals, local customs consideration
+**Accessibility**: Touch-friendly minimum 44px tap targets
+**Data Efficiency**: Offline-first capabilities and progressive loading
+
+### Wireframe Categories
+#### Customer-Facing Wireframes (01-05)
+- User registration and authentication flows
+- Product catalog browsing and search
+- Shopping cart and checkout process
+- Order tracking and history
+- Customer support interface
+
+#### Seller Dashboard Wireframes (06-08)
+- Seller onboarding and dashboard
+- Product management interface
+- Order management and fulfillment
+- Analytics and reporting views
+
+#### Platform Admin Wireframes (09-10)
+- Platform administration dashboard
+- Tenant management interface
+- System configuration panels
+
+### User Flow Documentation Requirements
+**Flow Diagrams**: Complete user journeys from entry to conversion
+**Decision Points**: User choice branches and error handling
+**Success Paths**: Primary conversion flows
+**Edge Cases**: Error states and recovery flows
+**Accessibility Flows**: Alternative navigation paths
+
+### Wireframe Review Checklist
+- [ ] Mobile-first responsive design implemented
+- [ ] Touch-friendly interface elements (minimum 44px)
+- [ ] Bangla language support planned
+- [ ] Local payment method integration considered
+- [ ] Offline functionality designed
+- [ ] Loading states and error handling included
+- [ ] Navigation breadcrumbs and back functionality
+- [ ] Accessibility standards compliance
 ```
 
 ## 6. Maintenance Guidelines
@@ -282,17 +386,28 @@ For larger documents, maintain TOC with line number references:
 - Maintain change logs for each phase
 - Branch strategy for parallel phase development
 
+### Wireframe Version Control & Management
+- **Design File Versioning**: Use semantic versioning for wireframe files (v1.0, v1.1, v2.0)
+- **File Naming Convention**: Maintain sequential numbering with version suffixes when needed
+- **Design System Consistency**: Ensure component library alignment across all wireframes
+- **Responsive Documentation**: Version control for different breakpoint designs
+- **Handoff Documentation**: Include developer notes and specifications with each wireframe version
+- **Review Cycle Integration**: Wireframe reviews aligned with documentation review cycles
+
 ### Review Cycle
-- **Weekly**: Task breakdown updates
-- **Bi-weekly**: Phase document reviews
-- **Monthly**: Master document alignment check
-- **Per Release**: Complete documentation audit
+- **Weekly**: Task breakdown updates and wireframe iterations
+- **Bi-weekly**: Phase document reviews and UI/UX design reviews
+- **Monthly**: Master document alignment check and design system updates
+- **Per Release**: Complete documentation audit and wireframe finalization
 
 ### Quality Assurance
-- Peer review for all document changes
-- Consistency checks across phases
-- Link validation between documents
+- Peer review for all document changes and wireframe updates
+- Consistency checks across phases and design systems
+- Link validation between documents and wireframe references
 - Regular spelling and grammar checks
+- Mobile-first responsive design validation
+- Bangladesh market UX compliance checks
+- Accessibility standards verification for all wireframes
 
 ---
 
