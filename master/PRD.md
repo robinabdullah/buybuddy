@@ -1,7 +1,3 @@
-Got it ✅ — I’ll now extend your **Product Requirements Document** to include **all features we discussed**, both MVP and future-phase requirements, with a dedicated **MVP Scope** section for clarity.
-
----
-
 # Product Requirements Document – Bangladesh F-Commerce E-Commerce Platform
 
 ## 1. Elevator Pitch
@@ -23,13 +19,13 @@ A modern, multi-tenant e-commerce platform tailored for Bangladesh’s small-to-
 
 ### 3.1 User Account & Profile Management
 
-* Social login (Facebook, Google) and OTP-based mobile login.
-* Multiple address book entries (Home, Office, Village).
+* Social login (Facebook, Google) and OTP-based mobile login. **`MVP`**
+* Multiple address book entries (Home, Office, Village). **`MVP`**
 * Saved payment details (bKash, debit/credit cards).
-* Order history with easy reordering.
-* Wishlist with stock and price change alerts.
+* Order history with easy reordering. **`MVP`**
+* Wishlist with stock and price change alerts. **`MVP`**
 
-### 3.2 Product Catalog & Search
+### 3.2 Product Catalog & Search  **`MVP`**
 
 * Category & subcategory browsing.
 * Advanced search with auto-suggestions (Bangla + English).
@@ -39,19 +35,21 @@ A modern, multi-tenant e-commerce platform tailored for Bangladesh’s small-to-
 * Variant selection: Size, Color, Weight, Volume.
 * Stock status: In Stock / Out of Stock.
 
-### 3.3 Product Detail Page
+### 3.3 Product Detail Page 
 
-* High-resolution images with zoom.
-* Dual-language toggle (Bangla / English).
-* Price display with MRP, discount %, and final price.
+* High-resolution images with zoom.  **`MVP`**
+* Dual-language toggle:
+  * English **`MVP`**
+  * Bangla
+* Price display with MRP, discount %, and final price.  **`MVP`**
 * Delivery availability checker by postal code/location.
 * Cashback & promotional tags.
 * Reviews and ratings with verified buyer badge.
 
 ### 3.4 Cart & Checkout
 
-* Persistent cart synced across devices.
-* Guest checkout without registration.
+* Persistent cart synced across devices.  **`MVP`**
+* Guest checkout without registration. **`MVP`**
 * Payment methods:
   * bKash, Nagad, Rocket, Upay
   * Debit/Credit Cards
@@ -59,7 +57,7 @@ A modern, multi-tenant e-commerce platform tailored for Bangladesh’s small-to-
   * Bank Transfer
 * Partial payment option for high-value items.
 * Delivery slot selection for groceries.
-* Promo code support with auto-apply best coupon.
+* Promo code support with auto-apply best coupon. **`MVP`**
 
 ### 3.5 Payment Gateway Integration
 
@@ -71,69 +69,76 @@ A modern, multi-tenant e-commerce platform tailored for Bangladesh’s small-to-
 ### 3.6 Order Management
 
 * Real-time order tracking with courier APIs (Pathao, RedX, Steadfast, eCourier, Paperfly).
-* Order status updates via SMS & Email.
+* Order status updates via SMS & Email. **`MVP`**
 * Split order handling for multi-warehouse orders.
 * Easy cancellation, returns, and replacement requests.
+  * Easy cancellation  **`MVP`**
 * Refund and replacement flows per Bangladesh policy.
+* **Automated Order Verification Calls**: Intelligent post-order confirmation system that initiates automated voice calls to customers within 2-4 hours of order placement. The system uses conversational AI to conduct friendly order confirmation calls in Bangla/English, asking natural confirmation questions ("We're excited to process your recent order! Can you confirm the delivery address and preferred time?") while subtly verifying purchase authenticity. Includes smart call timing based on local business hours, customer timezone preferences, and order value thresholds. Failed verification triggers manual review flags for potential fraud prevention.
 
 ### 3.7 Delivery & Logistics
 
-* Zone-based delivery charges (Dhaka Metro, Outside Dhaka, Remote).
+* Zone-based delivery charges (Dhaka Metro, Outside Dhaka, Remote). **`MVP`**
 * Same-day delivery for Dhaka city.
 * Cash collection integration for COD.
 * Courier selection per product type.
 
 ### 3.8 Admin Dashboard
 
-* Product management with bulk upload (Excel/CSV).
+* Product management with bulk upload (Excel/CSV). **`MVP`**
 * Inventory tracking with low-stock alerts.
-* Manual order creation for phone orders.
-* Supplier management for purchase orders and inventory sourcing.
-* Role-based permissions (dynamic creation and assignment).
-* Audit logs for tracking admin actions.
+* Manual order creation from store owner's login portal. **`MVP`**
+* Supplier management for purchase orders and inventory sourcing. **`MVP`**
+* Role-based permissions (dynamic creation and assignment). **`MVP`**
+* Audit logs for tracking admin actions. **`MVP`**
 
 ### 3.9 Platform Management (Admin)
 
-* Create, suspend, and delete e-commerce companies and stores.
-* Platform-wide user management and tenant assignments.
+* Create, suspend, and delete e-commerce companies and stores. **`MVP`**
+* Platform-wide user management and tenant assignments. **`MVP`**
 * System configuration (payment gateways, shipping zones, tax rules).
-* Emergency store management (impersonate store users).
+* Emergency store management (impersonate store users)-Admin Only. **`MVP`**
 * Platform-wide performance monitoring and health checks.
 
 ### 3.10 Marketing & Engagement
 
 * Push notifications (App & Web — future).
-* SMS campaigns via GP, Robi, Banglalink gateways.
-* Email campaigns for updates and promotions.
-* Affiliate program support.
+* **SMS Marketing**: Bulk campaigns via GP, Robi, Banglalink with customer segmentation, automated triggers, Bangla/English templates, and BTRC compliance.
+* **Email Marketing**: Template builder, automated sequences, customer segmentation, A/B testing, analytics, and personalized product recommendations.
 * Flash sales & countdown timers.
 * Loyalty points & cashback redeemable at checkout.
 
 ### 3.11 Security & Compliance
 
 * SSL encryption.
-* OTP for login, checkout, password reset.
+* OTP(SMS/Email) for login, password reset(configurable). **`MVP`**
 * Local VAT/TAX calculation integrated with NBR rules.
 * Audit trails for all admin actions.
 
 ### 3.12 Analytics & Reporting
 
-* Sales and revenue reports (product/category/location).
+* Sales and revenue reports (product/category/location). **`MVP`**
 * Customer insights (repeat purchase rate, order frequency).
-* Inventory reports for fast/slow-moving items.
+* Inventory reports for fast/slow-moving items. **`MVP`**
 * Marketing ROI tracking.
 
 ### 3.13 AI-Powered Social Commerce Management
 
 #### 3.13.1 Intelligent Customer Communication
-* **Multilingual AI Chatbot**: 24/7 automated responses in Bangla and English with context awareness.
-* **Smart Message Routing**: AI categorizes inquiries (product questions, order status, complaints) and routes to appropriate handlers.
-* **Sentiment Analysis**: Real-time detection of customer mood (angry, interested, confused) with escalation triggers.
+* **Multilingual AI Chatbot**: 24/7 automated responses in Bangla and English with context awareness. **`MVP`**
+* **Smart Message Routing**: AI categorizes inquiries (product questions, order status, complaints) and routes to appropriate handlers. **`MVP`**
+* **Sentiment Analysis**: Real-time detection of customer mood (angry, interested, confused) with escalation triggers. **`MVP`**
 * **Voice Message Transcription**: Convert Bangla voice messages to text for faster processing.
-* **AI-Powered FAQ Generation**: Automatically create and update FAQ based on frequently asked customer questions.
+* **AI-Powered FAQ Generation**: Automatically create and update FAQ based on frequently asked customer questions. **`MVP`**
 
-#### 3.13.2 Unified Social Commerce Hub
+#### 3.13.2 Unified Social Commerce Hub **`MVP`**
 * **Cross-Platform Inbox**: Single dashboard for Facebook Messenger, Instagram DM, WhatsApp Business messages.
+* **Private Comment Replies**: Auto-DM users who comment on FB/IG posts with product info or checkout links.
+* **Instagram Quick Replies**: Predefined buttons in IG DMs for FAQs, size/color requests, and order assistance.
+* **Story Mentions Capture**: Pull IG story mentions into social inbox for engagement and upselling.
+* **WhatsApp Interactive Messages**: Lists/buttons for variant selection, delivery slots.
+* **WhatsApp Flows Integration**: In-chat forms for address collection, COD confirmation, and product customization.
+* **Messenger Recurring Notifications**: Meta-compliant opt-in messages for re-engagement beyond 24-hour window.
 * **Customer Journey Mapping**: Track customer interactions across all social platforms with AI-driven insights.
 * **Auto-Follow-Up System**: Smart reminders for unanswered messages with context-aware suggested responses.
 * **Conversation History Intelligence**: AI remembers customer preferences, past orders, and interaction patterns.
@@ -146,25 +151,23 @@ A modern, multi-tenant e-commerce platform tailored for Bangladesh’s small-to-
 * **Visual Content Optimization**: AI-powered image editing, background removal, and enhancement for product photos.
 
 #### 3.13.4 Sales Automation & Lead Management
-* **Comment-to-Order AI**: Convert social media comments ("interested", "price?", "available?") into qualified leads.
-* **Lead Scoring System**: AI ranks potential customers based on engagement, profile, and behavior patterns.
+* **Comment-to-Order AI**: Convert social media comments ("interested", "price?", "available?") into qualified leads. **`MVP`**
+* **Engagement Auto-Replies**: Different automated flows for "price?", "available?", "bkash?" and other common queries. **`MVP`**
+* **Social CRM Tagging**: Auto-tag customers as "FB Live Buyer", "IG DM Lead", etc., for future segmentation.
 * **Abandoned Cart Recovery**: Smart remarketing campaigns via Facebook/Instagram for customers who didn't complete purchases.
-* **Price Negotiation Bot**: Handle common price discussions with pre-set rules and escalation triggers.
-* **Order Confirmation Assistant**: Automate order details collection (size, color, address) through conversational AI.
+* **Order Confirmation Assistant**: Automate order details collection (size, color, address) through conversational AI. **`MVP`**
 
-#### 3.13.5 Business Intelligence & Analytics
-* **Customer Behavior Prediction**: AI forecasts customer lifetime value, churn risk, and next purchase timing.
-* **Inventory Demand Forecasting**: Predict product demand based on social media engagement and seasonal trends.
-* **Optimal Posting Time AI**: Analyze when your specific audience is most active for maximum engagement.
-* **Competitor Analysis**: Track competitor social media performance and pricing strategies automatically.
-* **ROI Optimization**: AI recommends budget allocation across Facebook Ads, Instagram promotions, and organic content.
+#### 3.13.5 WooCommerce Integration for AI Chatbot
+* **WooCommerce Backend Integration**: AI chatbot operates with existing WooCommerce stores, using WooCommerce as the primary backend for product, order, and inventory management.
+* **Real-time Product Sync**: Automatic synchronization with WooCommerce product catalog, pricing, variants, and stock levels.
+* **WooCommerce Order Management**: Process orders directly through WooCommerce API, maintaining order history and status in the WooCommerce system.
+* **Stock Management Integration**: Real-time stock updates and availability checks via WooCommerce inventory system.
+* **WooCommerce-Only Mode**: Dedicated deployment option for merchants who want AI chatbot functionality without full e-commerce platform migration.
+* **Social Commerce Bridge**: Connect WooCommerce stores to social media channels (Facebook, Instagram, WhatsApp) through AI chatbot interface.
 
 #### 3.13.6 Bangladesh-Specific AI Features
-* **Local Language Processing**: Advanced Bangla NLP with support for regional dialects and colloquialisms.
-* **Cultural Context Recognition**: AI understands religious festivals, local events, and cultural nuances for appropriate responses.
-* **Payment Method Intelligence**: Smart recommendations for bKash, Nagad, or COD based on customer profile and order value.
-* **Location-Based Insights**: AI provides Thana/Upazila-specific customer behavior analysis and marketing recommendations.
-* **Weather-Aware Marketing**: Adjust product promotions based on monsoon seasons and weather patterns.
+* **Local Language Processing**: Advanced Bangla NLP with support for regional dialects and colloquialisms. **`MVP`**
+* **Cultural Context Recognition**: AI understands religious festivals, local events, and cultural nuances for appropriate responses. **`MVP`**
 
 #### 3.13.7 Fraud Prevention & Risk Management
 * **Fake Order Detection**: AI identifies suspicious orders based on customer behavior, location, and order patterns.
@@ -172,6 +175,7 @@ A modern, multi-tenant e-commerce platform tailored for Bangladesh’s small-to-
 * **Profile Authenticity Checker**: Verify customer profiles for genuine buyers vs. fake accounts or competitors.
 * **Spam Message Filter**: Automatically filter promotional messages, inappropriate content, and bot interactions.
 * **Refund Pattern Analysis**: Identify customers with high return rates and flag potential abuse.
+* **Automated Verification Calls Integration**: Seamless integration with order management's automated verification call system to identify suspicious orders through failed verification attempts, unusual customer responses, or inconsistent order details during confirmation calls.
 
 #### 3.13.8 Automated Social Media Publishing
 * **One-Click Product Posting**: Post any product from admin panel directly to Facebook page with auto-generated content and proper formatting.
@@ -180,23 +184,16 @@ A modern, multi-tenant e-commerce platform tailored for Bangladesh’s small-to-
 * **Bulk Product Campaigns**: Select multiple products and create coordinated social media campaigns across platforms.
 * **Inventory-Driven Auto-Posting**: Automatically promote overstocked items or new arrivals based on inventory levels.
 * **Template-Based Publishing**: Pre-designed post templates for different product categories (fashion, electronics, food, etc.).
-* **Story & Reels Integration**: Auto-create Instagram Stories and Facebook Stories with product highlights and limited-time offers.
-* **Live Session Management**: Integrate with Facebook/Instagram Live for product demonstrations with real-time inventory sync.
+* **Live Commerce Automation**: FB Live comment parsing for "order <SKU>" commands with auto stock reservation, live overlay integration for real-time stock/price updates, and post-live remarketing to engaged viewers.
 
 #### 3.13.9 Advanced Social Commerce Automation
 * **Dynamic Pricing Posts**: Automatically update social media posts when product prices change or promotions start/end.
-* **Customer Review Integration**: Auto-share positive customer reviews and unboxing videos as social proof posts.
 * **Seasonal Campaign Automation**: Pre-schedule posts for Eid, Puja, winter clothing, monsoon essentials based on calendar.
-* **Competitor Response Automation**: Monitor competitor posts and automatically respond with better offers or highlights.
 * **Stock Alert Posting**: Auto-post when popular items are back in stock to notify followers.
-* **User-Generated Content Sharing**: Automatically repost customer photos/videos featuring your products (with permission).
 * **Flash Sale Broadcasting**: Instant posting across all platforms when flash sales or limited-time offers go live.
 * **Engagement-Based Reposting**: Automatically repost high-performing content at optimal times for maximum reach.
 
 #### 3.13.10 Performance Optimization & Analytics
-* **Auto A/B Testing**: Continuously test different message templates, post formats, and response strategies.
-* **Response Time Optimization**: AI suggests optimal response timing to maximize conversion rates.
-* **Engagement Rate Improvement**: Recommendations for increasing post engagement based on successful patterns.
 * **Customer Satisfaction Tracking**: Monitor and score customer interactions for continuous service improvement.
 * **Sales Conversion Analytics**: Track the complete funnel from social media engagement to completed orders.
 * **Post Performance Dashboard**: Real-time analytics showing which posts drive the most sales, engagement, and website traffic.
@@ -205,45 +202,49 @@ A modern, multi-tenant e-commerce platform tailored for Bangladesh’s small-to-
 
 ### 3.14 POS Functionalities
 
-* Full POS system for offline store billing.
-* Multi-store POS management.
-* Real-time stock sync with online store.
+* Full POS system for physical store billing.
+  * POS system be activated and e-commerce can be deactivated **`MVP`**
+  * this is like activating certain features or configuring features.
+* Multi-store POS management. **`MVP`**
 
 ### 3.15 Advanced SEO
 
 * Google Tag Manager + GA4 + Enhanced Conversions.
 * Facebook Pixel integration.
+* **Meta Conversions API (CAPI)**: Server-side events for purchase, checkout, and view events for better targeting accuracy.
 * Merchant Center setup.
 
 ### 3.16 Product Stock Control
 
-* Real-time stock updates after each sale (online & POS).
-* Stock deduction on order placement.
-* Stock restoration on cancellation/return.
-* Safety stock level alerts.
+* Real-time stock updates after each sale (online & POS). **`MVP`**
+* Stock deduction on order placement. **`MVP`**
+* Stock restoration on cancellation/return. **`MVP`**
+* Safety stock level alerts. **`MVP`**
 * Batch & lot tracking for medicine, cosmetics, food.
 
 ### 3.17 Multi-Warehouse & Multi-Store Management
 
 * Manage inventory across multiple warehouses/stores.
+  * multiple store under tenant **`MVP`**
 * Assign specific warehouses to product categories.
 
 ### 3.18 Multi-Tenant Application
 
-* Host multiple independent e-commerce stores in one platform.
-* Store-specific branding, themes, colors, and domains.
+* Host multiple independent e-commerce stores in one platform. **`MVP`**
+* Store-specific branding, themes, colors, and domains. **`MVP`**
 * Per-tenant VAT/tax rules, payment methods, and delivery settings.
+  * delivery settings **`MVP`**
 
 ### 3.19 Tenant-Specific Settings
 
-* Custom themes, banners, and logos per tenant.
+* Custom themes, banners, and logos per tenant. **`MVP`**
 * Configurable delivery rules:
 
   * Groceries → Same-day delivery slots
   * Electronics → Scheduled delivery with installation
 * Payment method enable/disable per tenant.
 
-### 3.20 Content Management
+### 3.20 Content Management **`MVP`**
 
 * CMS for Static Pages (About Us, Terms, Privacy Policy).
 * Blog/News Section (content marketing).
@@ -254,15 +255,15 @@ A modern, multi-tenant e-commerce platform tailored for Bangladesh’s small-to-
 
 * Live Chat System (real-time customer support).
 * Help Desk/Ticketing System (customer issue tracking).
-* FAQ Management (self-service support).
+* FAQ Management (self-service support). **`MVP`**
 * Customer Feedback/Review System (product reviews, ratings).
 
 ### 3.22 Advanced E-commerce Features
 
-* Recently Viewed Products (browsing history).
+* Recently Viewed Products (browsing history). **`MVP`**
 * Cross-sell/Up-sell Recommendations (AI-powered product suggestions).
 * Gift Cards/Vouchers (digital gift certificates).
-* Guest User Shopping (without full registration).
+* Guest User Shopping (without full registration). **`MVP`**
 
 ### 3.23 Image Management & Optimization
 
@@ -275,7 +276,7 @@ A modern, multi-tenant e-commerce platform tailored for Bangladesh’s small-to-
 * AI-powered background removal for product images.
 * AI image retouching and enhancement features.
 
-### 3.24 Feature Management & Configuration
+### 3.24 Feature Management & Configuration **`MVP`**
 
 * **Feature Toggle System**: Enable/disable features per tenant via admin dashboard.
 * **Dynamic UI Rendering**: Show/hide UI components based on activated features.
@@ -283,17 +284,18 @@ A modern, multi-tenant e-commerce platform tailored for Bangladesh’s small-to-
 
 ### 3.25 Advanced Marketing & Automation
 
-* Cart Abandonment Recovery (email/SMS campaigns for abandoned carts).
-* Email Marketing Automation (drip campaigns, triggered emails).
+* Cart Abandonment Recovery (multi-channel email/SMS campaigns).
+* Marketing Automation (drip campaigns, behavioral triggers, lifecycle campaigns).
+* Campaign Analytics (ROI tracking, customer lifetime value, performance optimization).
 * Personalization Engine (personalized homepage, product recommendations).
 
 ### 3.26 Advanced Inventory & Supply Chain
 
-* Stock Reservation System (temporary stock holds during checkout).
-* Supplier Management (purchase orders, supplier ratings).
+* Stock Reservation System (temporary stock holds during checkout). **`MVP`**
+* Supplier Management (purchase orders). **`MVP`**
 * Low Stock Alerts (automated reorder suggestions).
 
-### 3.27 Coupon, Voucher & Discount Management
+### 3.27 Coupon, Voucher & Discount Management **`MVP`**
 
 * Coupon creation and management (percentage, fixed amount, BOGO).
 * Voucher system (gift vouchers, promotional vouchers).
@@ -303,19 +305,20 @@ A modern, multi-tenant e-commerce platform tailored for Bangladesh’s small-to-
 
 ### 3.28 Store Owner Management
 
-* Staff management (hiring, roles, permissions for store employees).
+* Staff management (hiring, roles, permissions for store employees). **`MVP`**
 * Customer relationship management (CRM) for individual stores.
 * Store branding customization (beyond basic themes).
 * Store-specific marketing campaign creation and management.
-* Store-specific shipping and delivery configuration.
-* Financial reporting (profit/loss, tax reports) per store.
+* Store-specific shipping and delivery configuration. **`MVP`**
+* Financial reporting (profit/loss, tax reports) per store. **`MVP`**
 
 ### 3.29 Social Commerce Integration
 
-* Direct Facebook/Instagram catalog sync with real-time inventory.
-* Social media comment-to-order conversion (comment "Order" to auto-create).
-* WhatsApp Business integration for order placement and customer support.
-* Live streaming sales integration (Facebook Live, Instagram Live shopping).
+* Direct Facebook/Instagram catalog sync with real-time inventory. **`MVP`**
+* Social media comment-to-order conversion (comment "Order" to auto-create). **`MVP`**
+* WhatsApp Business integration for order placement and customer support. **`MVP`**
+* Live streaming sales integration (Facebook Live, Instagram Live shopping). **`MVP`**
+* **Dynamic Ads for Retargeting**: Auto-run catalog-based ads to users who interacted with social channels but didn't convert.
 * Social proof widgets showing recent purchases from social media friends.
 * Share-to-earn referral system for social media shares.
 * Social media contest and giveaway management tools.
@@ -403,6 +406,7 @@ A modern, multi-tenant e-commerce platform tailored for Bangladesh’s small-to-
 * **Backend**: .NET 9 with Onion Architecture
 * **Database**: PostgreSQL
 * **Integration Layer**: Dedicated third-party integration layer for logistics, payments, and social media APIs
+* **Containerization**: Docker and Docker Compose for development, testing, and production deployments **`MVP`**
 
 ### 6.2 Architecture Overview
 
@@ -417,21 +421,21 @@ A modern, multi-tenant e-commerce platform tailored for Bangladesh’s small-to-
 ### 6.3 API Architecture Requirements
 
 **API Design**:
-* RESTful API design with proper HTTP verbs (GET, POST, PUT, DELETE)
-* GraphQL for complex data fetching
+* RESTful API design with proper HTTP verbs (GET, POST, PUT, DELETE) **`MVP`**
+* GraphQL for complex data fetching [MVP with simple example, just to start]
 * API versioning strategy (v1, v2, etc.)
 
-**Authentication & Authorization**:
+**Authentication & Authorization**: **`MVP`**
 * JWT token-based authentication
 * Role-based access control (RBAC) for different user types with customized permission assignment
 * API key management for third-party integrations
 
-**Data Format & Standards**:
+**Data Format & Standards**: **`MVP`**
 * JSON request/response format
 * Consistent error response structure
 * Pagination standards for list endpoints
 
-**Performance Requirements**:
+**Performance Requirements**: **`MVP`**
 * Response time SLAs (e.g., <200ms for critical endpoints)
 * Caching strategy (Redis/in-memory)
 * Database query optimization
@@ -454,25 +458,29 @@ A modern, multi-tenant e-commerce platform tailored for Bangladesh’s small-to-
    * Real-time tracking updates
    * Rate calculation engine
 
-3. **Social Media Integration Service (NestJS)**
+3. **Social Media Integration Service (NestJS)** **`MVP`**
    * Facebook/Instagram API handling
    * AI auto-reply processing
    * Message queue management
 
 4. **Notification Service (NestJS)**
-   * SMS gateway handling (GP, Robi, Banglalink)
+   * SMS gateway handling (GP, Robi, Banglalink) **`MVP`**
    * Email campaigns
    * Push notifications
    * Rate limiting per provider
 
 **Service Communication**:
 * API Gateway for request routing
-* Event Bus (Redis/RabbitMQ) for async communication
+* Event Bus (Redis/RabbitMQ) for async communication **`MVP`**
 * Circuit breakers for fault isolation
 * Independent scaling based on service load
 
+**Containerization & Deployment**: **`MVP`**
+* **Docker Containers**: All services containerized for consistent deployment across environments
+* **Docker Compose**: Multi-container orchestration for local development and testing
+* **Container Registry**: Docker Hub or private registry for image storage and version management
+* **Environment Configuration**: Docker environment variables for configuration management
+* **Multi-stage Builds**: Optimized Docker builds for production deployments
+* **Health Checks**: Container health monitoring and automatic restart capabilities
+
 ---
-
-
-If you want, I can now also prepare **a development roadmap** mapping MVP → Phase 2 → Phase 3 so it’s easier for engineering and AI teams to plan sprints.
-Do you want me to prepare that next?
