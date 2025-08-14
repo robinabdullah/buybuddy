@@ -2,12 +2,12 @@
 ## E-Commerce Platform Development
 
 ### Table of Contents
-- [1. Documentation Architecture](#1-documentation-architecture) (Line 14)
-- [2. Phase-Specific Extraction Approach](#2-phase-specific-extraction-approach) (Line 31)
-- [3. Documentation Workflow](#3-documentation-workflow) (Line 118)
-- [4. Task Breakdown Methodology](#4-task-breakdown-methodology) (Line 166)
-- [5. Document Templates](#5-document-templates) (Line 219)
-- [6. Maintenance Guidelines](#6-maintenance-guidelines) (Line 374)
+- [1. Documentation Architecture](#1-documentation-architecture) (Lines 14-30)
+- [2. Phase-Specific Extraction Approach](#2-phase-specific-extraction-approach) (Lines 31-117)
+- [3. Documentation Workflow](#3-documentation-workflow) (Lines 118-165)
+- [4. Task Breakdown Methodology](#4-task-breakdown-methodology) (Lines 166-218)
+- [5. Document Templates](#5-document-templates) (Lines 219-373)
+- [6. Maintenance Guidelines](#6-maintenance-guidelines) (Lines 374-416)
 
 ---
 
@@ -101,19 +101,31 @@ documentation/
 4. **Parallel Development**: Different teams can work on different phases
 5. **Release Management**: Clear documentation for each release cycle
 6. **AI-Assisted Development**: AI can focus on specific phase requirements
-7. **Large File Management**: Table of contents with line numbers for navigation
+7. **Large File Management**: Table of contents with line number ranges (start-end) for precise navigation
 
 ### API Documentation Module TOC
 For API documents, maintain module-wise table of contents with line number range references:
 
+**IMPORTANT**: Always use line ranges (Lines X-Y) in table of contents, never single line numbers.
+
 ```markdown
 ### Table of Contents
-- [User Management](#user-management) (Line 45)
-  - [Registration](#registration) (Line 67)
-  - [Authentication](#authentication) (Line 89)
-- [Product Catalog](#product-catalog) (Line 120)
-  - [Category Management](#category-management) (Line 142)
+- [User Management](#user-management) (Lines 45-85)
+  - [Registration](#registration) (Lines 67-78)
+  - [Authentication](#authentication) (Lines 89-115)
+- [Product Catalog](#product-catalog) (Lines 120-180)
+  - [Category Management](#category-management) (Lines 142-165)
 ```
+
+### AI Assistant Reading Instructions
+For AI coding assistants reading documentation with line numbers:
+
+1. **Use Table of Contents**: Navigate using line ranges (Lines X-Y) for targeted reading
+2. **Read Tool Strategy**: Use `offset` and `limit` parameters to read specific sections
+3. **Reference Format**: When discussing features, reference exact line numbers (e.g., "as specified in MVP-PRD.md:45-50")
+4. **Batch Reading**: Read multiple related sections in parallel for efficiency
+
+Example: To read MVP Core User Management features, use `Read` tool with `offset: 34, limit: 9` to get lines 34-42.
 
 ## 3. Documentation Workflow
 
@@ -147,7 +159,7 @@ For API documents, maintain module-wise table of contents with line number range
 
 #### Step 5: API Documentation
 1. Create phase-specific API docs with module-wise organization
-2. Include line-numbered table of contents for AI navigation
+2. Include table of contents with line number ranges (Lines X-Y) for precise AI navigation
 3. Document all endpoints for current phase features
 4. Specify request/response formats and authentication
 
@@ -224,7 +236,7 @@ For API documents, maintain module-wise table of contents with line number range
 ## E-Commerce Platform
 
 ### Table of Contents
-[Generated with line numbers]
+[Generated with line number ranges (Lines X-Y) for each section]
 
 ### 1. MVP Scope Overview
 **Objective**: Define MVP features extracted from Master PRD
@@ -253,7 +265,7 @@ For API documents, maintain module-wise table of contents with line number range
 ## E-Commerce Platform
 
 ### Table of Contents
-[Generated with line numbers]
+[Generated with line number ranges (Lines X-Y) for each section]
 
 ### 1. System Architecture
 - High-level architecture for this phase
@@ -284,7 +296,7 @@ For API documents, maintain module-wise table of contents with line number range
 ## E-Commerce Platform Development
 
 ### Table of Contents
-[Generated with line numbers]
+[Generated with line number ranges (Lines X-Y) for each section]
 
 ### Sprint Planning Overview
 **Total Hours**: XX
@@ -312,7 +324,7 @@ For API documents, maintain module-wise table of contents with line number range
 ## E-Commerce Platform Development
 
 ### Table of Contents
-[Generated with line numbers]
+[Generated with line number ranges (Lines X-Y) for each section]
 
 ### Mobile-First Design Principles
 **Target Devices**: Mobile (320px+), Tablet (768px+), Desktop (1024px+)
