@@ -357,7 +357,42 @@ A modern, multi-tenant e-commerce platform tailored for Bangladesh’s small-to-
 * Bulk order consolidation to reduce per-unit shipping costs.
 * Alternative delivery locations (nearby shops, community centers, mosques).
 
-### 3.31 Customer Education & Onboarding
+### 3.31 Social Integration Compliance & Operations
+
+**Messaging Compliance**:
+* Facebook/Instagram 24-hour messaging rule adherence. **`MVP`**
+* Messenger Recurring Notifications (RN) opt-in for campaigns beyond 24 hours.
+* WhatsApp template creation, approval, quality rating, and fallback management.
+* per-tenant quiet hours enforcement. **`MVP`**
+
+**Consent & Opt-Out Registry**: **`MVP`**
+* Per-channel consent log (Messenger, Instagram, WhatsApp, SMS) with opt-in/opt-out history.
+* DND user prevention and compliance management.
+
+**Meta Asset Binding**: **`MVP`**
+* Per-tenant Facebook Pages, Instagram Business, and WhatsApp Business connection flows.
+* Secure token storage with automatic refresh and rotation.
+* Webhook verification and reauthorization flow management.
+
+**Social Inbox Operations**: **`MVP`**
+* Threaded conversations with multi-agent collision prevention.
+* SLAs, macros, and assignment tools for message handling.
+* PII masking for sensitive data in messages.
+
+### 3.32 Live Commerce Engine **`MVP`**
+
+**Comment Parser**: **`MVP`**
+* Detect structured commands (e.g., "order A12 2") in FB/IG Live comments.
+* SKU normalization and validation for live orders.
+
+**Automated Engagement**: **`MVP`**
+* Send checkout links (web/WhatsApp) from detected comments or DM requests.
+* Post-live remarketing to engaged viewers using compliant opt-in flows.
+
+**Live Integration**:
+* Real-time stock and price overlays via OBS/browser source integration.
+
+### 3.33 Customer Education & Onboarding
 
 * Video tutorials in Bangla for first-time online shoppers.
 * Step-by-step guided shopping experience for new users.
