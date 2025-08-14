@@ -6,12 +6,37 @@ A modern, multi-tenant e-commerce platform tailored for Bangladesh’s small-to-
 
 ---
 
-## 2. Who is this app for
+## 2. User Personas & Target Audience
 
-* **Primary Target**: Small to medium Facebook/Instagram sellers expanding into e-commerce.
-* **Secondary Target**: Entrepreneurs managing both social media and offline stores.
-* Sellers requiring localized payment, logistics, and marketing solutions for Bangladesh.
-* Businesses seeking affordable, multi-tenant online store infrastructure.
+### Primary Target
+* **Small to medium Facebook/Instagram sellers expanding into e-commerce**
+* **Entrepreneurs managing both social media and offline stores**
+
+### Secondary Target
+* **Sellers requiring localized payment, logistics, and marketing solutions for Bangladesh**
+* **Businesses seeking affordable, multi-tenant online store infrastructure**
+
+### 2.1 End Customers
+* **Urban Shoppers**: Tech-savvy users with smartphones, prefer bilingual experience, use digital payments
+* **Rural Shoppers**: Basic smartphone users, Bangla-first interface(not in MVP), COD preference, need guidance
+
+### 2.2 Store Owners/Sellers
+* **Facebook Sellers**: Social media focused, need automation and scaling
+* **Multi-channel Owners**: Physical + online stores, require unified inventory
+* **New Entrepreneurs**: First-time e-commerce users, need complete solution with support
+
+### 2.3 Store Staff
+* **Store Managers**: Handle operations, inventory, reporting - need efficient management tools
+* **Customer Service Reps**: Process inquiries, returns - need AI assistance and multilingual support
+* **Sales Associates**: POS operations, customer interaction - need simple, fast interfaces
+
+### 2.4 Platform Administrators
+* **Platform Super Admins**: Technical management, tenant oversight, emergency support capabilities
+
+### 2.5 System Interfaces
+* **AI Assistant**: Social media automation, customer service, order processing
+* **Admin Dashboard**: Tenant management, analytics, system monitoring
+* **POS Interface**: Physical store operations, inventory sync, staff management
 
 ---
 
@@ -346,21 +371,87 @@ A modern, multi-tenant e-commerce platform tailored for Bangladesh’s small-to-
 
 ## 4. User Stories
 
-### Core User Stories
-1. **As a seller**, I can connect my Facebook page to auto-reply and chat with customers from one dashboard.
-2. **As a seller**, I can manage online and offline store inventory in real-time.
-3. **As a store owner**, I can manage my online and offline inventory across multiple locations.
-4. **As a buyer**, I can browse and search products in Bangla and English.
-5. **As a buyer**, I can pay using my preferred local payment method.
-6. **As a platform admin**, I can create tenant stores, assign permissions, and monitor activities.
-7. **As a platform admin**, I can impersonate store users for emergency support and troubleshooting.
-8. **As a store owner**, I can hire staff, assign roles, and manage their permissions for my stores.
-9. **As a store owner**, I can create targeted marketing campaigns and configure shipping rules for my specific stores.
+### 4.1 Customer Experience
+1. **As a customer**, I can register and login using Facebook/Google or OTP for quick access.
+2. **As a customer**, I can browse and search products in Bangla and English with auto-suggestions.
+3. **As a customer**, I can filter products by price, brand, rating, and availability.
+4. **As a customer**, I can view detailed product information with optimized high-resolution images and delivery checker.
+5. **As a customer**, I can add products to cart and checkout as guest without registration.
+6. **As a customer**, I can pay using bKash, Nagad, cards, or COD based on my preference.
+7. **As a customer**, I can track my order in real-time through courier APIs.
+8. **As a customer**, I can easily cancel, return, or replace orders with automated refund processing.
+9. **As a customer**, I can save multiple addresses and payment methods for faster checkout.
+10. **As a customer**, I can receive order confirmations via automated voice calls in my preferred language.
 
-### Bangladesh-Specific User Stories
-13. **As a seller**, I can sync my Facebook/Instagram catalog with real-time inventory updates.
-14. **As a customer**, I can comment "Order" on Facebook posts to automatically place orders.
-18. **As a seller**, I can track courier performance and choose the best delivery service for each area.
+### 4.2 Store Owner/Seller Operations
+11. **As a store owner**, I can manage online and physical store's inventory across multiple stores in real-time.
+12. **As a store owner**, I can connect Facebook/Instagram pages for unified social commerce management.
+13. **As a store owner**, I can use AI chatbot to auto-reply to customer inquiries in Bangla and English.
+14. **As a store owner**, I can convert social media comments to orders automatically.
+15. **As a store owner**, I can generate and post product content to social media with one click.
+16. **As a store owner**, I can manage products with bulk upload via Excel/CSV.
+17. **As a store owner**, I can create manual orders from my admin portal.
+18. **As a store owner**, I can run POS operations for physical store with inventory sync.
+19. **As a store owner**, I can track sales analytics and inventory reports.
+20. **As a store owner**, I can manage suppliers and create purchase orders.
+
+### 4.3 Marketing & Customer Engagement
+21. **As a store owner**, I can create SMS marketing campaigns with customer segmentation.
+22. **As a store owner**, I can run email marketing with automated sequences and A/B testing.
+23. **As a store owner**, I can create coupon codes and discount campaigns.
+24. **As a store owner**, I can schedule social media posts across Facebook, Instagram, and WhatsApp.
+25. **As a store owner**, I can track marketing ROI and campaign performance.
+26. **As a store owner**, I can set up abandoned cart recovery campaigns.
+27. **As a store owner**, I can configure loyalty points and cashback programs.
+
+### 4.4 AI-Powered Social Commerce
+28. **As a store owner**, I can manage all social media messages from a unified inbox.
+29. **As a store owner**, I can use AI to detect customer sentiment and escalate angry customers.
+30. **As a store owner**, I can auto-generate Bangla product descriptions with SEO optimization.
+31. **As a store owner**, I can use AI to tag and segment customers based on behavior.
+32. **As a store owner**, I can integrate with WooCommerce stores for AI chatbot functionality.
+33. **As a store owner**, I can use AI for fraud detection and COD risk assessment.
+34. **As a store owner**, I can automate WhatsApp flows for address collection and confirmation.
+
+### 4.5 Store Staff Management
+35. **As a store manager**, I can handle daily operations, inventory, and generate reports efficiently.
+36. **As a customer service rep**, I can process inquiries and returns with AI assistance.
+37. **As a sales associate**, I can use simple POS interface for quick customer transactions.
+38. **As a store owner**, I can hire staff, assign roles, and manage permissions dynamically.
+39. **As a store staff**, I can access customer history and interaction patterns for better service.
+
+### 4.6 Platform Administration
+40. **As a platform admin**, I can create, suspend, and delete tenant stores.
+41. **As a platform admin**, I can manage users and assign them to appropriate tenants.
+42. **As a platform admin**, I can impersonate store users for emergency support.
+43. **As a platform admin**, I can configure system-wide settings like payment gateways and tax rules.
+44. **As a platform admin**, I can monitor platform performance and health checks.
+45. **As a tenant success manager**, I can onboard new clients and configure their features.
+46. **As a platform admin**, I can track audit logs for all admin actions and system changes.
+
+### 4.7 Multi-Tenant & Configuration
+47. **As a tenant**, I can customize my store branding, themes, and domain.
+48. **As a tenant**, I can configure delivery rules specific to my business type.
+49. **As a tenant**, I can enable/disable payment methods based on my requirements.
+50. **As a tenant**, I can activate/deactivate features like POS or e-commerce as needed.
+51. **As a tenant**, I can manage multiple warehouses and assign them to product categories.
+
+### 4.8 Bangladesh-Specific Features
+52. **As a seller**, I can sync Facebook/Instagram catalog with real-time inventory updates.
+53. **As a customer**, I can comment "Order" on Facebook posts to automatically place orders.
+54. **As a seller**, I can track courier performance and choose optimal delivery services per area.
+55. **As a customer**, I can select delivery slots for groceries and scheduled delivery for electronics.
+56. **As a seller**, I can calculate VAT/TAX according to NBR rules automatically.
+57. **As a customer**, I can shop during monsoon season with weather-adjusted delivery notifications.
+58. **As a seller**, I can use alternative delivery locations like nearby shops or community centers.
+
+### 4.9 Advanced E-commerce Features
+59. **As a customer**, I can view recently browsed products and get personalized recommendations.
+60. **As a customer**, I can shop without full registration using guest mode.
+61. **As a store owner**, I can manage gift cards and vouchers for customers.
+62. **As a store owner**, I can optimize images automatically during upload with CDN integration.
+63. **As a store owner**, I can track batch and lot numbers for medicine, cosmetics, and food products.
+64. **As a store owner**, I can receive safety stock alerts and automated reorder suggestions.
 
 ---
 
